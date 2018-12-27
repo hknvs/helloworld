@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="./微博.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container" >
+    <div class="top">热门话题</div>
+        <div class="middle" id="c">
+            <div class="q"  onclick=" parseElement(this) " >
+                <a class="topic"  >
+                    #爱致初感肌#</a><span class="hot">推荐</span>
+            </div>
+            <div class="q" id="q1" >
+                <a>#张艺兴的原创音乐世界#</a><span>509万</span>
+            </div>
+
+            <div class="q" id="q2">
+                 <a>#青春最好时#</a><span>1.4亿</span>
+            </div>
+            <div class="q">
+                <a>#战狼#</a><span>12.5亿</span>
+            </div>
+            <div class="q">
+                <a>#内蒙古自治区70周年庆#</a><span>1145万</span>
+            </div>
+            <div class="q">
+                <a>#电视剧深海利剑#</a><span>7072万</span>
+            </div>
+            <div class="q">
+                <a>#轩辕剑之汉之云#</a><span>4.1亿</span>
+            </div>
+            <div class="q">
+                <a>#瑜伽课#</a><span>2亿</span>
+            </div>
+            <div class="q">
+                <a>#运动教室#</a><span>106.7亿</span>
+            </div>
+            <div class="q">
+                <a class="topic" >#中国影视产业集群#</a><span class="hot">推荐</span>
+            </div>
+
+        </div>
+    <div class="more">
+        查看更多&gt
+    </div>
+
+
+</div>
+<script>
+    var t1=document.getElementsByTagName('a');
+    for(var i=0;i<t1.length;i++){
+        t1[i].setAttribute('title',t1[i].childNodes[0].nodeValue);
+    }
+//    console.log(t1[2].childNodes[0].nodeValue);
+
+   function  parseElement(ele) {
+       var big={};
+       big.nodeName=ele.nodeName;
+       big.nodeType=ele.nodeType;
+      big.arrs={};
+      var small=ele.attributes;
+      for(var key in small){
+          if(typeof small[key]!="function"){
+              var n=small[key].name;
+              var v=small[key].value;
+              if(n!=undefined){
+                 big.arrs[n]=v;
+              }
+          }
+      }
+      console.log(big) ;
+   }
+//
+//var eleA=document.getElementById('q1');
+//var eleB=document.getElementById('q2');
+//
+//
+//    function compareElement(ele1,ele2,exceptAttr) {
+//        var res={};
+//        var eleAparsed=parseElement(eleA);
+//        var eleBparsed=parseElement(eleB);
+//        if(eleAparsed.nodeType!=eleBparsed.nodeType){
+//            res.nodeType={};
+//            res.nodeType.eleA=eleAparsed.nodeType;
+//            res.nodeType.eleB=eleBparsed.nodeType;
+//
+//
+//        }
+//        if(eleAparsed.nodeName!=eleBparsed.nodeName){
+//            res.nodeName={};
+//            res.nodeName.eleA=eleAparsed.nodeName;
+//            res.nodeName.eleB=eleBparsed.nodeName;
+//
+//        }
+//
+//       var a1=ele1.attributes;
+//
+//       var a2=ele2.attributes;
+//
+//
+//
+//    }
+</script>
+</body>
+</html>

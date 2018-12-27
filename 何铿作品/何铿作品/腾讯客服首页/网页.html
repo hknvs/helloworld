@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .wrap{
+            overflow: hidden;
+        }
+        /* .nav{
+        width:100%;
+        min-width: 1120px;
+        height: 800px;
+    } */
+
+        /* .nav .wrap{
+                position: relative;
+                margin:0 auto;
+                width: 1120px;
+                
+                height:100%;
+            } */
+
+        .topic{
+            height: 75px;
+            width: 100%;
+            background: white;
+            position: relative;
+
+        }
+        .topic .logo{
+            background: url('images/图标.jpg')no-repeat 0px 0px;
+            width: 230px;
+            height: 50px;
+            position: absolute;
+            top:12px;
+            /* left:50px; */
+            
+        }
+       
+        .topic .voice{
+            background: url('images/声音.jpg')no-repeat 0px 0px;
+            width: 370px;
+            height: 75px;
+            position: absolute;
+            margin-right: 1px;
+            top:24px;
+            right: 50px;
+
+            /* left:12%; */
+        }
+        .topic .voice::after{
+            content: '腾讯客服招聘啦！！';
+            padding-left: 38px;
+            
+        }
+        .topic .login a{
+            background: url('images/登录.jpg')no-repeat 0px 0px;
+            width: 60px;
+            height: 30px;
+            position: absolute;
+            /* margin-right: 1px; */
+            top:21px;
+            right: 30px;
+        }
+        .search{
+            background: url('images/indexBanner.png');
+            /* background: #ccc; */
+            width:100%;
+            height: 500px;
+            position:relative;
+           
+           
+            left:0px;
+
+        }
+        .search .ft{
+            position: relative;
+         
+           /* padding-top:60px; */
+           
+            font-size: 50px;
+            color: skyblue;
+            width: 600px;
+            height: 60px;
+            top:60px;
+            left: 35%;
+
+            /* text-align: center; */
+        }
+        .search .sh{
+            position:relative;
+            width: 400px;
+            height: 36px;
+           left: 36%;
+           top:107px;
+           border-radius: 3px;
+           color: #ccc;
+
+        }
+        .search .shphoto{
+            position:relative;
+            width: 20px;
+            height: 20px;
+           left: 35%;
+           top:125px; 
+        }
+        .search .hot{
+            position:relative;
+            width: 400px;
+            height: 20px;
+           left: 36%;
+           top:125px; 
+           color: rgb(94, 79, 79);
+        }
+        .server{
+            background: skyblue;
+            /* background: #ccc; */
+            width:100%;
+           
+            position:relative;
+           
+          
+            left:0px;
+            height: 330px;
+        }
+        .sv{
+            width: 100%;
+            /* width: 1000px; */
+            height: 330px;
+            background: skyblue;
+            /* text-align: center; */
+            padding-top: 10px;
+            position: absolute;
+            left: 30%;
+           
+            }
+        .sv li{
+        padding: 10px 10px 80px;
+        background: #fff;
+        display: inline-block;
+        /* box-shadow: 0 5px 20px #000; */
+        position: relative;
+        margin-right: 40px;
+       
+        }
+        li:nth-of-type(1){
+        /* transform: rotate(15deg); */
+        }
+        li:nth-of-type(2){
+        /* transform: rotate(30deg); */
+        }
+        li:nth-of-type(3){
+        /* transform: rotate(-15deg); */
+        }
+        .protect,.month,.tx110{
+            height: 59px;
+            width: 220px;
+            color: skyblue;
+        }
+        .key{
+            height: 70px;
+            width: 220px;
+            background: url('images/加号.jpg')no-repeat -4px 10px;
+        }
+        .yes{
+            height: 70px;
+            width: 220px;
+            background: url('images/对勾.jpg')no-repeat -4px 10px;
+        }
+        .aaa{
+            height: 70px;
+            width: 220px;
+            background: url('images/感叹号.jpg')no-repeat -4px 10px;
+        }
+        .pt,.yw,.tx{
+            width: 220px;
+            height: 22px;
+            font-size: 14px;
+        }
+        .jiantou{
+            width: 20px;
+            height: 20px;
+            background: url('images/右箭头.jpg')no-repeat 0px -1px;
+            margin-top:10px;
+        }
+        .weixin{
+            width: 100px;
+            height: 150px;
+            border: 1px solid #000;
+            position: absolute;
+            right: 20px;
+        }
+        .wx1{
+            width: 100px;
+            height: 100px;
+            
+            background: url('images/微信.jpg')no-repeat 0px -1px;
+            position: absolute;
+            right: 0px;
+        }
+        .wx2{
+            width: 100px;
+            height: 50px;
+            
+            font-size: 14px;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            color: rgb(94, 79, 79);
+        }
+        .connect{
+            background: #ccc;
+            /* background: #ccc; */
+            width:100%;
+           
+            position:relative;
+           
+           
+            left:0px;
+            height: 70px;
+        }
+        .copy,.copy2{
+            width: 100%;
+            /* height: 330px; */
+            background: #fff;
+            text-align: center;
+            padding-top: 3px;
+        }
+        .copy li{
+            /* padding: 10px 10px 80px; */
+        background: #fff;
+        display: inline-block;
+        /* box-shadow: 0 5px 20px #000; */
+        position: relative;
+        margin-right: 5px;
+        color: #b2b2b2;
+        font-size: 12px;
+        }
+        .copy2 li{
+                    /* padding: 10px 10px 80px; */
+        background: #fff;
+        display: inline-block;
+        /* box-shadow: 0 5px 20px #000; */
+        position: relative;
+        margin-right: 5px;
+        color: #b2b2b2;
+        font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+       <div class="wrap">
+            <div class="topic">
+                    <div class="logo"></div>
+                    <div class="voice"></div>
+                    <div class="login">
+                        <a href="#"></a>
+                    </div>
+                
+            </div>
+            <div class="search">
+                <h1 class="ft">服务，因为用心而温暖</h1>
+                <input type="text" class="sh" value="请输入产品或问题">
+                <a class="shphoto">
+                    <img src="images/搜索.jpg" alt="">
+                </a>
+                <div class="hot">
+                    热门搜索：
+                    <span>公众平台</span>
+                    <span>QQ会员</span>
+                    <span>QQ空间被封</span>
+                </div>
+                <div class="weixin">
+                        <div class="wx1"> </div>
+                        <div class="wx2"> 
+                            <div>关注微信公众号</div>
+                            <div>向腾讯客服提问</div>
+                        </div>
+
+                </div>
+                
+              
+
+            </div>
+            <div class="server">
+                <ul class="sv">
+                    <li class="zhanghao">
+                        <div class="key"></div>
+                        <h3 class="protect">账号保护</h3>
+                        <div class="pt">密码找回，冻结，解封等问题</div>
+                        <div class="pt">QQ账号服务</div>
+                        <div class="pt">微信账号服务</div>
+                        <div class='jiantou'></div>
+                    </li>
+                    <li class="yewu">
+                            <div class="yes"></div>
+                            <h3 class="month">包月业务管理</h3>
+                            <div class="yw">如何开通腾讯包月业务</div>
+                            <div class="yw">如何关闭腾讯包月业务</div>
+                            <div class="yw">解除手机业务冻结</div>
+                            <div class='jiantou'></div>
+                    </li>
+                    <li class="tengxun110">
+                            <div class="aaa"></div>
+                            <h3 class="tx110">腾讯110</h3>
+                            <div class="tx">举报QQ/微信上的违法违规行为</div>
+                            <div class="tx">打击公示、恶意信息查询</div>
+                            <div class="tx">安全课堂、反诈骗知识</div>
+                            <div class='jiantou'></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="connect">
+                <ul class="copy">
+                    <li>关于腾讯</li>
+                    <li>about Tencent</li>
+                    <li>服务条款</li>
+                </ul>
+                <ul class="copy2">
+                    <li>Copyright</li>
+                    <li>©</li>
+                    <li>1998-2018</li>
+                    <li>Tencent All Rights Reserved</li>
+                    <li>腾讯公司</li>
+                    <li>版权所有</li>
+                    <li>粤网文</li>
+                    <li>[2011]0483-070号</li>
+                    
+                </ul>
+            </div>
+       </div>
+    </div>
+</body>
+</html>
